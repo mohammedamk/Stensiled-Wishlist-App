@@ -1,0 +1,9 @@
+if (!empty($_GET['shop'])) { 
+    $shop = $_GET['shop']; 
+    $data['shop'] = $shop;
+ $data['shop_id'] = shop_id($shop); 
+ $data['table'] = 'products'; 
+$this->load->load_admin('templates/welcome', $data);
+ } 
+ else { 
+     $this->load->load_admin('errors/shop-errors/shop-not-found'); }
